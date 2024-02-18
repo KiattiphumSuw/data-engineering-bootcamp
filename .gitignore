@@ -185,4 +185,5 @@ pyrightconfig.json
 de-lifecycle
 
 00-bootcamp-project/durable-matter-414109-deb3-load-files-to-bigquery-722eedcb3063.json
+00-bootcamp-project/pipeline.conf
 00-bootcamp-project/test.py
