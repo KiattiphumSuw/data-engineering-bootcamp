@@ -40,7 +40,6 @@ h.load(DATA_FOLDER, project_id, client, job_config, files_list)
 # partition tables are orders users
 # In the formatting, file name : date
 partition_files_dict = {'events':'2021-02-10', 'orders':"2021-02-10", 'users':"2020-10-23"}
-
 job_config = bigquery.LoadJobConfig(
     skip_leading_rows=1,
     write_disposition=bigquery.WriteDisposition.WRITE_TRUNCATE,

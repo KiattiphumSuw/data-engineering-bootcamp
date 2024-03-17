@@ -2,10 +2,12 @@ import json
 import os
 import sys
 
+from dotenv import load_dotenv
 from google.api_core import exceptions
 from google.cloud import storage
 from google.oauth2 import service_account
 
+load_dotenv()
 
 def upload_blob(bucket_name, source_file_name, destination_blob_name):
     """Uploads a file to the bucket."""
@@ -19,7 +21,7 @@ def upload_blob(bucket_name, source_file_name, destination_blob_name):
     keyfile = os.environ.get("KEYFILE_PATH")
     service_account_info = json.load(open(keyfile))
     credentials = service_account.Credentials.from_service_account_info(service_account_info)
-    project_id = "dataengineercafe"
+    project_id = os.environ.get("PROJECT_ID") 
 
     storage_client = storage.Client(
         project=project_id,

@@ -184,6 +184,8 @@ pyrightconfig.json
 # DEB Workshop
 de-lifecycle
 
-00-bootcamp-project/durable-matter-414109-deb3-load-files-to-bigquery-722eedcb3063.json
+00-bootcamp-project/dags/durable-matter-414109-deb3-load-files-to-bigquery-722eedcb3063.json
 00-bootcamp-project/pipeline.conf
 00-bootcamp-project/test.py
+00-bootcamp-project/dags/durable-matter-deb3-load-file-to-gcs-414109-5d8e93e4d59b.json
+03-data-lake-with-google-cloud-storage/examples/uploading-to-gcs/durable-matter-deb3-load-file-to-gcs-414109-5d8e93e4d59b.json
