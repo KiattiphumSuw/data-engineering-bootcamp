@@ -1,0 +1,21 @@
+version: 2
+
+models:
+
+  - name: stg_greenery__user
+    description: Staging models for Greenery users
+    columns:
+      - name: user_guid
+        description: User ID
+
+  - name: stg_greenery__orders
+    description: Greenery orders
+    columns:
+      - name: order_guid
+        description: order ID
+  
+  - name: stg_greenery__addresses
+    description: Greenery addresses
+    columns:
+      - name: address_guid
+        description: Address ID

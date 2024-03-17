@@ -22,8 +22,10 @@ DAGS_FOLDER = "/opt/airflow/dags"
 DATA = "users"
 
 
-def _extract_data(ds):
+def _extract_data():
+    ds = "2020-10-23"
     url = f"http://34.87.139.82:8000/{DATA}/?created_at={ds}"
+    print(url)
     response = requests.get(url)
     data = response.json()
 
@@ -41,6 +43,7 @@ def _extract_data(ds):
                 "address",
             ]
             writer.writerow(header)
+            print(f"This is data: {data}")
             for each in data:
                 data = [
                     each["user_id"],
@@ -59,7 +62,8 @@ def _extract_data(ds):
         return "do_nothing"
 
 
-def _load_data_to_gcs(ds):
+def _load_data_to_gcs():
+    ds = "2020-10-23"
     keyfile_gcs = os.environ.get("KEYFILE_GCS")
     service_account_info_gcs = json.load(open(keyfile_gcs))
     credentials_gcs = service_account.Credentials.from_service_account_info(
@@ -78,7 +82,8 @@ def _load_data_to_gcs(ds):
     blob.upload_from_filename(file_path)
 
 
-def _load_data_from_gcs_to_bigquery(ds):
+def _load_data_from_gcs_to_bigquery():
+    ds = "2020-10-23"
     keyfile_bigquery = os.environ.get("KEYFILE_BQ")
     service_account_info_bigquery = json.load(open(keyfile_bigquery))
     credentials_bigquery = service_account.Credentials.from_service_account_info(

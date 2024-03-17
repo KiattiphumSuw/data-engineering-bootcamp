@@ -189,3 +189,4 @@ de-lifecycle
 00-bootcamp-project/test.py
 00-bootcamp-project/dags/durable-matter-deb3-load-file-to-gcs-414109-5d8e93e4d59b.json
 03-data-lake-with-google-cloud-storage/examples/uploading-to-gcs/durable-matter-deb3-load-file-to-gcs-414109-5d8e93e4d59b.json
+00-bootcamp-project/dags/durable-matter-414109-dbt-a357d155397d.json
